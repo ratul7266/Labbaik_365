@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labbaik 365 | Home</title>
+    <!-- daisy UI  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- text style  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- favicon img  -->
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+    <style>
+      .roboto {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-base-200 mx-auto  p-3">
+    <header>
+      <div class="justify-center py-12 space-y-4">
+        <span class="flex items-center gap-4"
+          ><img class="w-20 rounded-2xl" src="/logo.jpg" alt="" />
+          <h1 class="text-4xl font-bold">Labbaik 365-</h1></span
+        >
+        <h1 class="text-2xl text-gray-950 font-bold text-center">
+          Task Manager
+        </h1>
+        <p class="text-xl text-gray-600 font-bold text-center">
+          Stay organized and productive
+        </p>
+      </div>
+    </header>
+    <hr class="text-gray-400 opacity-20 mb-4" />
+    <main>
+      <section class="bg-base-100 rounded-2xl p-5">
+        <fieldset class="space-y-4">
+          <!-- Task Title -->
+          <input
+            type="text"
+            placeholder="Task Title..."
+            class="input input-lg input-bordered w-full focus:border-blue-700 outline-none"
+          />
+
+          <!-- Description -->
+          <textarea
+            placeholder="Description (optional)..."
+            class="textarea textarea-lg textarea-bordered w-full focus:border-blue-700 outline-none"
+          ></textarea>
+        </fieldset>
+
+        <!-- Button -->
+        <button
+          class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2"
+        >
+          <i class="fa-solid fa-calendar-plus"></i> Add
+        </button>
+      </section>
+      <section class="flex gap-3 mx-auto mt-7 w-full">
+        <div class="flex-1">
+          <button
+            class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2 rounded-xl"
+          >
+            All <span class="text-gray-300 font-medium text-lg">(0)</span>
+          </button>
+        </div>
+        <div class="flex-1">
+          <button
+            class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2 rounded-xl"
+          >
+            Active <span class="text-gray-300 font-medium text-lg">(0)</span>
+          </button>
+        </div>
+        <div class="flex-1">
+          <button
+            class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2 rounded-xl"
+          >
+            Completed <span class="text-gray-300 font-medium text-lg">(0)</span>
+          </button>
+        </div>
+      </section>
+      <section class="px-8 py-12 bg-base-100 mt-10 rounded-xl text-center">
+        <p class="text-gray-600 font-semibold text-base">No tasks yet. Add one above!</p>
+      </section>
+      <section class="px-8 py-12 bg-base-100 mt-10 rounded-xl text-center">
+        <p class="text-gray-600 font-semibold text-base">No active tasks</p>
+      </section>
+      <section class="px-8 py-12 bg-base-100 mt-10 rounded-xl text-center">
+        <p class="text-gray-600 font-semibold text-base">No completed tasks yet</p>
+      </section>
+    </main>
+  </body>
+</html>
