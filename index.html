@@ -42,95 +42,162 @@
           ><img class="w-20 rounded-2xl" src="./logo.jpg" alt="" />
           <h1 class="text-3xl md:text-5xl font-bold">Labbaik 365-</h1></span
         >
+        <hr
+          class="h-1 border-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-400 rounded-full my-6 mx-auto"
+        />
         <h1 class="text-2xl md:text-4xl text-gray-950 font-bold text-center">
           Task Manager
         </h1>
         <p class="text-xl text-gray-600 font-bold text-center">
           Stay organized and productive
         </p>
-        <p
-          class="font-bold text-sm xl:text-xl text-gray-800 space-y-2 w-3/5 mx-auto text-center"
+
+        <div
+          class="mx-auto rounded-2xl px-6 py-6 border border-warning/20 bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 shadow-md hover:shadow-lg text-base-content/80 text-sm md:text-base font-medium leading-relaxed text-center"
         >
-          "প্রতিটি দিন আল্লাহর দেওয়া একটি সুযোগ। কাজকে দায়িত্বের সঙ্গে করো,
-          সময়কে মূল্য দাও, আর পাশে যারা আছেন তাদেরও উৎসাহ দাও। <br> Labbaik 365 ->
-          আপনার কাজের সাথী।"
-        </p>
+          <div>
+            <span class="block mb-5"
+              ><i
+                class="fa-solid fa-quote-left text-warning/40 text-lg mr-2"
+              ></i>
+              প্রতিটি দিন আল্লাহর দেওয়া একটি সুযোগ। কাজকে দায়িত্বের সঙ্গে করো,
+              সময়কে মূল্য দাও, পাশে যারা আছেন তাদেরও উৎসাহ দাও।
+            </span>
+            <span
+              class="font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-success pt-4"
+            >
+              Labbaik 365 → আপনার কাজের সাথী।
+              <i
+                class="fa-solid fa-quote-right text-warning/40 text-lg ml-2"
+              ></i>
+            </span>
+          </div>
+        </div>
       </div>
     </header>
-    <hr class="text-gray-400 opacity-20 mb-4" />
+    <!-- <hr class="text-gray-400 opacity-20 mb-4" /> -->
+    <hr
+      class="h-1 border-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-400 rounded-full mb-6 w-1/3 mx-auto"
+    />
     <main>
-      <section class="bg-base-100 rounded-2xl p-5">
+      <section
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center"
+      >
         <fieldset class="space-y-4">
           <!-- Task Title -->
           <input
             type="text"
             placeholder="Task Title..."
-            class="input input-lg input-bordered w-full focus:border-blue-700 outline-none"
+            class="input input-lg input-bordered w-full focus:border-green-700 outline-none rounded-xl"
           />
 
           <!-- Description -->
           <textarea
             placeholder="Description (optional)..."
-            class="textarea textarea-lg textarea-bordered w-full focus:border-blue-700 outline-none"
+            class="textarea textarea-lg textarea-bordered w-full focus:border-green-700 outline-none rounded-lg"
           ></textarea>
         </fieldset>
 
         <!-- Button -->
         <button
-          class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2"
+          class="btn text-white bg-green-700 hover:bg-green-800 border-none w-full mt-4 h-14 text-lg font-semibold rounded-xl gap-2 shadow-md shadow-success/30 hover:shadow-xl"
+        >
+          <i class="fa-solid fa-calendar-plus text-lg"></i>
+          <span>Add Task</span>
+        </button>
+        <!-- <button
+          class="btn btn-success w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2"
         >
           <i class="fa-solid fa-calendar-plus"></i> Add
-        </button>
+        </button> -->
       </section>
       <section class="flex flex-wrap gap-3 mx-auto mt-7 w-full">
-        <div class="flex-1">
-          <button
-            class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2 rounded-xl"
-          >
-            All <span class="text-gray-300 font-medium text-lg">(0)</span>
-          </button>
-        </div>
-        <div class="flex-1">
-          <button
-            class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2 rounded-xl"
-          >
-            Active <span class="text-gray-300 font-medium text-lg">(0)</span>
-          </button>
-        </div>
-        <div class="flex-1">
-          <button
-            class="btn btn-primary w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2 rounded-xl"
-          >
-            Completed <span class="text-gray-300 font-medium text-lg">(0)</span>
-          </button>
-        </div>
+        <button
+          class="btn text-black bg-transparent hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
+        >
+          <span>All</span>
+          <span class="">(0) </span>
+        </button>
+        <button
+          class="btn text-black bg-transparent hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
+        >
+          <span>Active</span>
+
+          <span class=""> (0) </span>
+        </button>
+        <button
+          class="btn text-black bg-transparent hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 transition-all hover:scale-105 hover:shadow-md"
+        >
+          <span>Completed</span>
+
+          <span class=""> (0) </span>
+        </button>
       </section>
-      <section class="px-8 py-12 bg-base-100 mt-10 rounded-xl text-center">
-        <p class="text-gray-600 font-semibold text-base">
+      <section
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center mt-6"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"
+        >
+          <i class="fa-solid fa-file-circle-xmark text-2xl"></i>
+        </div>
+        <p class="font-bold text-base text-base-content/60">
           No tasks yet. Add one above!
         </p>
       </section>
-      <section class="px-8 py-12 bg-base-100 mt-10 rounded-xl text-center">
-        <p class="text-gray-600 font-semibold text-base">No active tasks</p>
+      <section
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"
+        >
+          <i class="fa-solid fa-file-circle-xmark text-2xl"></i>
+        </div>
+        <p class="font-bold text-base text-base-content/60">No active tasks</p>
       </section>
-      <section class="px-8 py-12 bg-base-100 mt-10 rounded-xl text-center">
-        <p class="text-gray-600 font-semibold text-base">
+      <section
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center"
+      >
+        <div
+          class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"
+        >
+          <i class="fa-solid fa-file-circle-xmark text-2xl"></i>
+        </div>
+        <p class="font-bold text-base text-base-content/60">
           No completed tasks yet
         </p>
       </section>
     </main>
-    <footer class="px-8 bg-neutral-content mt-10 rounded-xl text-center">
-      <h1 class="text-base md:text-4xl font-bold mb-2 pt-6">Labbaik 365</h1>
-      <ul class="font-medium text-sm text-gray-700 space-y-3 text-center py-6">
-        <li>•কি: দৈনন্দিন কাজ ট্র্যাক ও ম্যানেজ করার অ্যাপ।</li>
-        <li>•কেন: সময়ের মূল্য বোঝা ও প্রোডাক্টিভিটি বাড়ানোর জন্য।</li>
-        <li>•কীভাবে: কাজ লিস্ট করো, সম্পন্ন কাজ চিহ্নিত করো, অভ্যাস গড়ো।</li>
+    <footer class="px-8 bg-[#2d4a3e] mt-10 rounded-xl text-center">
+      <h1 class="text-xl md:text-4xl font-bold md:mb-2 text-[#c9972c] pt-6">
+        Labbaik 365
+      </h1>
+      <hr
+        class="h-1 border-0 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-400 rounded-full my-6 w-1/3 mx-auto"
+      />
+      <ul
+        class="font-medium text-sm text-[#afc1b9] md:space-y-3 text-center py-6"
+      >
         <li>
-          •মোটিভেশন: ছোট কাজকেও গুরুত্ব দাও, পাশে থাকা সবাইকে প্রেরণা দাও।
+          <span class="text-[#c9972c] text-2xl">•</span> কি: দৈনন্দিন কাজ
+          ট্র্যাক ও ম্যানেজ করার অ্যাপ।
+        </li>
+        <li>
+          <span class="text-[#c9972c] text-2xl">•</span> কেন: সময়ের মূল্য বোঝা ও
+          প্রোডাক্টিভিটি বাড়ানোর জন্য।
+        </li>
+        <li>
+          <span class="text-[#c9972c] text-2xl">•</span> কীভাবে: কাজ লিস্ট করো,
+          সম্পন্ন কাজ চিহ্নিত করো, অভ্যাস গড়ো।
+        </li>
+        <li>
+          <span class="text-[#c9972c] text-2xl">•</span> মোটিভেশন: ছোট কাজকেও
+          গুরুত্ব দাও, পাশে থাকা সবাইকে প্রেরণা দাও।
         </li>
       </ul>
-      <p class="mt-7 pb-4 text-base-content font-bold">
-        Copyright © 2026 - All right reserved by MD RATUL
+      <p class="xl:mt-7 pb-4 text-[#788e85] font-bold">
+        Copyright © 2026 - All right reserved by
+        <span class="text-[#c9972c]">MD RATUL</span>
       </p>
     </footer>
   </body>
