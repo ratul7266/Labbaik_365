@@ -89,7 +89,7 @@ function getFilteredTasks() {
 function createTaskCard(task) {
   const card = document.createElement("section");
   card.className =
-    "task-card bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-6 mb-4";
+    "task-card bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-6 mt-6 mb-4";
 
   card.innerHTML = `
     <div class="flex justify-between items-center gap-4">
