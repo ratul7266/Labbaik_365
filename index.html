@@ -105,36 +105,34 @@
           <i class="fa-solid fa-calendar-plus text-lg"></i>
           <span>Add Task</span>
         </button>
-        <!-- <button
-          class="btn btn-success w-full mt-4 h-12 text-xl font-semibold flex items-center justify-center gap-2"
-        >
-          <i class="fa-solid fa-calendar-plus"></i> Add
-        </button> -->
       </section>
+      <!-- all,active and completed button  -->
       <section class="flex flex-wrap gap-3 mx-auto mt-7 w-full">
-        <button
-          class="btn text-black bg-transparent hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
+        <button id="all-btn"
+          class="btn text-black   hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
         >
           <span>All</span>
           <span class="">(0) </span>
         </button>
-        <button
-          class="btn text-black bg-transparent hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
+        <button id="active-btn"
+          class="btn text-black hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
         >
           <span>Active</span>
 
           <span class=""> (0) </span>
         </button>
-        <button
-          class="btn text-black bg-transparent hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 transition-all hover:scale-105 hover:shadow-md"
+        <button id="completed-btn"
+          class="btn text-black hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 transition-all hover:scale-105 hover:shadow-md"
         >
           <span>Completed</span>
 
           <span class=""> (0) </span>
         </button>
       </section>
-      <section
-        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center mt-6"
+
+      <!-- no task add section  -->
+      <section id="all-no-task"
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center mt-6 hidden"
       >
         <div
           class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"
@@ -145,8 +143,8 @@
           No tasks yet. Add one above!
         </p>
       </section>
-      <section
-        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center"
+      <section id="active-no-task"
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mt-6  mb-4 text-center hidden"
       >
         <div
           class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"
@@ -155,8 +153,8 @@
         </div>
         <p class="font-bold text-base text-base-content/60">No active tasks</p>
       </section>
-      <section
-        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center"
+      <section id="completed-no-task"
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mt-6  mb-4 text-center hidden"
       >
         <div
           class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"
@@ -168,6 +166,8 @@
         </p>
       </section>
     </main>
+
+    <!-- footer section  -->
     <footer class="px-8 bg-[#2d4a3e] mt-10 rounded-xl text-center">
       <h1 class="text-xl md:text-4xl font-bold md:mb-2 text-[#c9972c] pt-6">
         Labbaik 365
@@ -200,5 +200,6 @@
         <span class="text-[#c9972c]">MD RATUL</span>
       </p>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
