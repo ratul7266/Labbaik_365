@@ -29,6 +29,13 @@
     />
     <!-- favicon img  -->
     <link rel="icon" type="image/x-icon" href="./favicon.png" />
+
+    <!-- Firebase App -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
     <style>
       .roboto {
         font-family: "Roboto", sans-serif;
@@ -108,20 +115,23 @@
       </section>
       <!-- all,active and completed button  -->
       <section class="flex flex-wrap gap-3 mx-auto mt-7 w-full">
-        <button id="all-btn"
-          class="btn text-black   hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
+        <button
+          id="all-btn"
+          class="btn text-black hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
         >
           <span>All</span>
           <span class="">(0) </span>
         </button>
-        <button id="active-btn"
+        <button
+          id="active-btn"
           class="btn text-black hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 hover:shadow-md"
         >
           <span>Active</span>
 
           <span class=""> (0) </span>
         </button>
-        <button id="completed-btn"
+        <button
+          id="completed-btn"
           class="btn text-black hover:bg-green-800 border-2 border-green-700 hover:text-white flex-1 h-12 text-xl font-semibold rounded-xl gap-2 transition-all hover:scale-105 hover:shadow-md"
         >
           <span>Completed</span>
@@ -131,7 +141,8 @@
       </section>
 
       <!-- no task add section  -->
-      <section id="all-no-task"
+      <section
+        id="all-no-task"
         class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mb-4 text-center mt-6 hidden"
       >
         <div
@@ -143,8 +154,9 @@
           No tasks yet. Add one above!
         </p>
       </section>
-      <section id="active-no-task"
-        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mt-6  mb-4 text-center hidden"
+      <section
+        id="active-no-task"
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mt-6 mb-4 text-center hidden"
       >
         <div
           class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"
@@ -153,8 +165,9 @@
         </div>
         <p class="font-bold text-base text-base-content/60">No active tasks</p>
       </section>
-      <section id="completed-no-task"
-        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mt-6  mb-4 text-center hidden"
+      <section
+        id="completed-no-task"
+        class="fade-up delay-4 bg-base-100 rounded-2xl border border-base-300 shadow-sm px-8 py-10 mt-6 mb-4 text-center hidden"
       >
         <div
           class="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center mx-auto mb-3"

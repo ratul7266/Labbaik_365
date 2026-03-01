@@ -1,4 +1,3 @@
-
 /* ================== DOM SELECT ================== */
 const titleInput = document.querySelector('input[type="text"]');
 const descInput = document.querySelector("textarea");
@@ -36,20 +35,25 @@ function addTask() {
   const title = titleInput.value.trim();
   const desc = descInput.value.trim();
 
-  if (!title) return alert("Task title লাগবে 😅");
+  if (!title) return; // alert বাদ, শুধু empty task ignore
 
-  tasks.push({
+  const newTask = {
     id: Date.now(),
     title,
     desc,
     completed: false,
-  });
+  };
+
+  tasks.push(newTask);
 
   titleInput.value = "";
   descInput.value = "";
 
   saveTasks();
   renderTasks();
+
+  // যদি login করা থাকে তাহলে cloud এ save
+  if (auth && auth.currentUser) saveTasksToCloud(auth.currentUser.uid);
 }
 
 /* ================== SAVE ================== */
@@ -137,7 +141,8 @@ function hideAllEmptyStates() {
 function showEmptyStateByFilter() {
   if (currentFilter === "all") allNoTask.classList.remove("hidden");
   else if (currentFilter === "active") activeNoTask.classList.remove("hidden");
-  else if (currentFilter === "completed") completedNoTask.classList.remove("hidden");
+  else if (currentFilter === "completed")
+    completedNoTask.classList.remove("hidden");
 }
 
 /* ================== REMOVE OLD TASKS ================== */
@@ -148,8 +153,10 @@ function removeOldTasks() {
 /* ================== COUNT UPDATE ================== */
 function updateCounts() {
   allBtn.querySelector("span:last-child").innerText = `(${tasks.length})`;
-  activeBtn.querySelector("span:last-child").innerText = `(${tasks.filter((t) => !t.completed).length})`;
-  completedBtn.querySelector("span:last-child").innerText = `(${tasks.filter((t) => t.completed).length})`;
+  activeBtn.querySelector("span:last-child").innerText =
+    `(${tasks.filter((t) => !t.completed).length})`;
+  completedBtn.querySelector("span:last-child").innerText =
+    `(${tasks.filter((t) => t.completed).length})`;
 }
 
 /* ================== BUTTON STYLE ================== */
@@ -178,3 +185,14 @@ completedBtn.addEventListener("click", () => {
   setActiveButton(completedBtn);
   renderTasks();
 });
+
+// Task add/update/delete logic
+addBtn.addEventListener("click", () => {
+  addTask(); // add task to local tasks array
+  saveTasks(); // save to localStorage
+  if (auth.currentUser) saveTasksToCloud(auth.currentUser.uid); // save to Firestore
+});
+
+task.completed = !task.completed;
+saveTasks();
+if (auth.currentUser) saveTasksToCloud(auth.currentUser.uid);
